@@ -15,7 +15,7 @@
 	       box-sizing: border-box;
 	       transition: .3s;
            background-color: black;
-           opacity: 0.8;*/
+           opacity: 0.8;
         }
 
         /*nav.black{
@@ -71,46 +71,45 @@
 body{
   margin: 0;
   padding: 0;
-  background: url(/home/anupam_shah/Desktop/TheFoodHogger/src/signIn.jpg);
+  background: url(/home/anupam_shah/Desktop/TheFoodHogger/src/aboutUs.jpg);
   background-size: cover;
   font-family:'Alegreya Sans', sans-serif;
 }
 
-.signUpBox{
-  position: relative;
-  top: 30%;
+.loginBox{
+  position: absolute;
+  top: 50%;
   left:50%;
   transform: translate(-50%,-50%);
-  width: 460px;
-  height: 740px;
-  padding:50px 40px;
+  width: 500px;
+  height: 520px;
+  padding:80px 40px;
   box-sizing: border-box;
   background: rgba(0, 0, 0, 0.8);
-  margin-top: 400px;
 
 }
 
-h2{
+h1{
   margin: 0;
-  padding: 0;
+  padding-top: 1px;
   color: #8BC34A;
   text-align: center;
 }
 
-.signUpBox p{
+.loginBox p{
   margin: 0;
   padding: 0;
   font-weight: bold;
   color: #fff;
 }
 
-.signUpBox input{
+.loginBox input{
   width: 100%;
   margin-bottom: 20px;
 }
 
-.signUpBox input[type="text"],
-.signUpBox input[type="Password"]{
+.loginBox input[type="text"],
+.loginBox input[type="password"]{
   border: none;
   border-bottom: 1px solid #fff;
   background: transparent;
@@ -124,7 +123,7 @@ h2{
   color: rgba(255, 255, 255, 0.5);
 }
 
-.signUpBox input[type="submit"]{
+.loginBox input[type="submit"]{
   border: none;
   outline: none;
   height: 40px;
@@ -135,18 +134,18 @@ h2{
   border-radius: 20px;
 }
 
-.signUpBox input[type="submit"]:hover{
+.loginBox input[type="submit"]:hover{
   background: #8BC34A;
   color: #262626;
 }
 
-.signUpBox a{
+.loginBox a{
   color: #fff;
   font-size: 14px;
   font-weight: bold;
 }
 
-.signUpBox input[type="text"], .signUpBox input[type = "Password"]{
+.loginBox input[type="text"], .loginBox input[type = "password"]{
 	border:none;
 	border-bottom: 2px solid #8BC34A;
 	outline: none;
@@ -158,16 +157,16 @@ h2{
 	box-sizing: border-box; 
 }
 
-.signUpBox input[type="text"]:focus, 
-.signUpBox input[type = "Password"]:focus{
+.loginBox input[type="text"]:focus, 
+.loginBox input[type = "password"]:focus{
 	border-bottom:2px solid #8BC34A;
 }
 
-.signUpBox{
+.inputBox{
 	position: relative;
 }
 
-.signUpBox input[type="submit"]{
+.loginBox input[type="submit"]{
 	border:none;
 	outline: none;
 	height: 40px;
@@ -177,7 +176,7 @@ h2{
 	border-radius: 20px;
 }
 
-.signUpBox a{
+.loginBox a{
 	color:#8BC34A;
 	font-size: 14px;
 	font-weight: bold;
@@ -187,12 +186,17 @@ h2{
 
 }	
 
-.signUpBox label{
+label{
   color:#8BC34A;
   text-align: center;
   display: block;
 }	
-	</style>
+
+.msg{
+  margin-top: 50px;
+	}
+  </style>
+
 </head>
 <body>
 	
@@ -202,37 +206,34 @@ h2{
 			<ul>
 				<li><a href="#">Restaurants</a></li>
 				<li><a href="#">Menu</a></li>
-				<li><a href="/home/anupam_shah/Desktop/TheFoodHogger/ContactUs.html">Contact Us</a></li>
+				<li><a href="#">Contact Us</a></li>
 				<li><a href="https://hungrypandadiaries.wordpress.com/">Blog</a></li>
 				
 			</ul>
 		</nav>
 	</div>
-	<div class="signUpBox">
-      <h2>Register Here</h2>
-      <label>It's free and always will be.</label>
+	<div class="loginBox">
+      <h1>Contact Us</h1>
+      <label>We would love to hear from you!</label>
       <form>
-        <p>Name</p>
-        <input id="name" type="text" name="" placeholder="Enter Name">
-        <p>Username</p>
-        <input id="username" type="text" name="" placeholder="Enter username">
+      	<div class="inputBox">
+        	<p>Email</p>
+        	<input class="username" type="text" name="Name" placeholder="Ex. - Sheeran">
+        </div>
         
-        <p>Email</p>
-        <input id="email" type="text" name="" placeholder="abc123@example.com">
-  
-        <p>Password</p>
-        <input id="password" type="Password" name="" placeholder="********">
+        <div class="inputBox">
+        	<p>Password</p>
+        	<input class="password" type="text" name="Email" placeholder="example@abc.com">
+        </div>
         
-        <p>Gender</p>
-        <input id="gender" type="text" name="" placeholder="Male/Female">
+        <div class="inputBox">
+          <p>Message</p>
+          <input class="username msg" type="text" name="Message" placeholder="Tell that how can we help you?">
+        </div>
         
-        <p>Address</p>
-        <input id="address" type="text" name="" placeholder="Address">
-        
-        <p><font size="0.8">By clicking Sign Up, you agree to our Terms and confirm that you have read our Data Policy, including our Cookie Use Policy.</font></p><br>
-        
-        <input id="submitBtn" onclick="submitClick()" type="submit" name="" value="Sign Up">
+        <input type="submit" class="submit" name="submit" value="Let's Talk!" onclick="validate()">
       </form>
+      <!--a href="#">Forgot Password</a-->
     </div>
 </body>
 </html>

@@ -2,7 +2,7 @@
 <!DOCTYPE html>
 <html>
 <head>
-	<title>Sign In</title>
+	<title>Contact Us</title>
 	<link href="https://fonts.googleapis.com/css?family=Alegreya+Sans" rel="stylesheet">
 	<style type="text/css">
 		nav{
@@ -71,46 +71,102 @@
 body{
   margin: 0;
   padding: 0;
-  background: url(/home/anupam_shah/Desktop/TheFoodHogger/src/signIn.jpg);
+  background: url(/home/anupam_shah/Desktop/TheFoodHogger/src/aboutUs.jpg);
   background-size: cover;
   font-family:'Alegreya Sans', sans-serif;
 }
 
-.signUpBox{
-  position: relative;
+/*.header{
+  position: absolute;
   top: 30%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  text-align: center;
+}
+
+.header h1{
+  color:#fff;
+  font-size: 50px;
+}
+
+.header p{
+  color: #fff;
+  font-size: 28px;
+  margin-bottom: 10px;
+}*/
+
+.form{
+  position: absolute;
+  top: 69%;
+  left: 50%
+  transform: translate(-50%, -50%);
+  text-align: center;
+}
+
+input{
+  width: 100%;
+  margin: 20px 0;
+  
+  border:none;
+  border-bottom: 1px solid white;
+}
+
+#msg{
+  margin-top: 60px;
+}
+
+::-webkit-input-placeholder{
+  color:#EAEAEA;
+  font-size:12px;
+  letter-spacing: 1px; 
+}
+
+button{
+  padding-bottom: 20px 32px;
+  font-size: 16px;
+  background-color:#8BC34A;
+  height: 40px;
+  border:none; 
+  border-radius: 10px;
+  margin-top: 30px;
+  color:white;
+}
+
+.Box{
+  position: absolute;
+  
   left:50%;
   transform: translate(-50%,-50%);
-  width: 460px;
-  height: 740px;
-  padding:50px 40px;
+  width: 500px;
+  height: 620px;
+  margin-top: 100px;
+  padding-top: 130px;
   box-sizing: border-box;
   background: rgba(0, 0, 0, 0.8);
-  margin-top: 400px;
 
 }
 
-h2{
+/*h2{
   margin: 0;
   padding: 0;
   color: #8BC34A;
   text-align: center;
-}
+}*/
 
-.signUpBox p{
+.Box p{
   margin: 0;
   padding: 0;
   font-weight: bold;
   color: #fff;
 }
 
-.signUpBox input{
+.Box input{
   width: 100%;
   margin-bottom: 20px;
 }
 
-.signUpBox input[type="text"],
-.signUpBox input[type="Password"]{
+.Box input[type="text"],
+.Box input[type="password"]{
   border: none;
   border-bottom: 1px solid #fff;
   background: transparent;
@@ -124,7 +180,7 @@ h2{
   color: rgba(255, 255, 255, 0.5);
 }
 
-.signUpBox input[type="submit"]{
+.Box input[type="submit"]{
   border: none;
   outline: none;
   height: 40px;
@@ -135,63 +191,61 @@ h2{
   border-radius: 20px;
 }
 
-.signUpBox input[type="submit"]:hover{
+.Box input[type="submit"]:hover{
   background: #8BC34A;
   color: #262626;
 }
 
-.signUpBox a{
+.Box a{
   color: #fff;
   font-size: 14px;
   font-weight: bold;
 }
 
-.signUpBox input[type="text"], .signUpBox input[type = "Password"]{
-	border:none;
-	border-bottom: 2px solid #8BC34A;
-	outline: none;
-	height: 40px;
-	color: #8BC34A;
-	background: transparent;
-	font-size: 16px;
-	padding-left: 20px;
-	box-sizing: border-box; 
+.Box input[type="text"], .Box input[type = "password"]{
+  border:none;
+  border-bottom: 2px solid #8BC34A;
+  outline: none;
+  height: 40px;
+  color: #8BC34A;
+  background: transparent;
+  font-size: 16px;
+  padding-left: 20px;
+  box-sizing: border-box; 
 }
 
-.signUpBox input[type="text"]:focus, 
-.signUpBox input[type = "Password"]:focus{
-	border-bottom:2px solid #8BC34A;
+.Box input[type="text"]:focus, 
+.Box input[type = "password"]:focus{
+  border-bottom:2px solid #8BC34A;
 }
 
-.signUpBox{
-	position: relative;
+.Box{
+  position: relative;
 }
 
-.signUpBox input[type="submit"]{
-	border:none;
-	outline: none;
-	height: 40px;
-	font-size: 16px;
-	background:#8BC34A;
-	color: #fff;
-	border-radius: 20px;
+.Box input[type="submit"]{
+  border:none;
+  outline: none;
+  height: 40px;
+  font-size: 16px;
+  background:#8BC34A;
+  color: #fff;
+  border-radius: 20px;
 }
 
-.signUpBox a{
-	color:#8BC34A;
-	font-size: 14px;
-	font-weight: bold;
-	text-decoration: none;
-	text-align: center;
-	display: block;
-
-}	
-
-.signUpBox label{
+.Box a{
   color:#8BC34A;
+  font-size: 14px;
+  font-weight: bold;
+  text-decoration: none;
   text-align: center;
   display: block;
-}	
+
+}
+
+
+
+
 	</style>
 </head>
 <body>
@@ -202,37 +256,29 @@ h2{
 			<ul>
 				<li><a href="#">Restaurants</a></li>
 				<li><a href="#">Menu</a></li>
-				<li><a href="/home/anupam_shah/Desktop/TheFoodHogger/ContactUs.html">Contact Us</a></li>
-				<li><a href="https://hungrypandadiaries.wordpress.com/">Blog</a></li>
+				<li><a href="#">About Us</a></li>
+				<li><a href="#">Blog</a></li>
 				
 			</ul>
 		</nav>
-	</div>
-	<div class="signUpBox">
-      <h2>Register Here</h2>
-      <label>It's free and always will be.</label>
-      <form>
-        <p>Name</p>
-        <input id="name" type="text" name="" placeholder="Enter Name">
-        <p>Username</p>
-        <input id="username" type="text" name="" placeholder="Enter username">
-        
-        <p>Email</p>
-        <input id="email" type="text" name="" placeholder="abc123@example.com">
-  
-        <p>Password</p>
-        <input id="password" type="Password" name="" placeholder="********">
-        
-        <p>Gender</p>
-        <input id="gender" type="text" name="" placeholder="Male/Female">
-        
-        <p>Address</p>
-        <input id="address" type="text" name="" placeholder="Address">
-        
-        <p><font size="0.8">By clicking Sign Up, you agree to our Terms and confirm that you have read our Data Policy, including our Cookie Use Policy.</font></p><br>
-        
-        <input id="submitBtn" onclick="submitClick()" type="submit" name="" value="Sign Up">
-      </form>
+
+    <div class="Box">
+    <div class="header">
+      <h1>Contact Us</h1>
+      <p>We would love to hear from you!</p>
     </div>
+
+    <div class="form">
+      <form>
+      <input type="text" placeholder="Name"/>
+      <input type="text" placeholder="E-mail"/>
+      <input type="text" id="msg" placeholder="Message"/>
+      </form>
+
+      <button type="submit">Let's Talk!</button>
+    </div>
+    </div>
+	</div>
+	
 </body>
 </html>
