@@ -35,6 +35,7 @@
 	       box-sizing: border-box;
 	       transition: .3s;
            background-color:black;
+           float: left;
         
         }
 
@@ -84,18 +85,31 @@
 
         }
 
+        nav ul li a:hover{
+            background-color: #8BC34A;
+            border-radius: 6px;
+        }
+        /*nav ul li ul li{
+            display: none;
+        }
+
+        nav ul li:hover ul li{
+            display: block;
+        }*/
+
         nav ul li a:focus{
             outline: none;
         }
         nav ul li a.active{
-            background:#8BC34A;
             color: #fff;
+            border:solid 2px #8BC34A;
             border-radius: 6px;
-            margin-right: 10px;
+            margin-right: 18px;
+            margin-left: 20px;
         }
 
         nav ul li a.signup{
-            background:#8BC34A;
+            border:solid 2px #8BC34A;
             color: #fff;
             border-radius: 6px;
         }
@@ -110,7 +124,8 @@
         }
 
         .content{
-            margin-top: 80px;
+            margin-top: 10px;
+            float: left;
 
         }
 
@@ -127,14 +142,16 @@
         .grid-section{
            max-width: 960px;
            margin-right: 0 auto;
-           padding: 6% 2%; 
+           margin-top:0;
+           padding: 6% 2%;
+            
         }
 
         .grid{
             margin: 20px 0 0 0;
             padding: 0;
             list-style: inline;
-            display: inline-block;
+            display: block;
             text-align: center;
             width: 100%;
         }
@@ -224,7 +241,8 @@
         #footer-container{
             max-width: 100%;
             height: 100px;
-            margin: 0 auto;
+            margin: 0;
+            margin-bottom: 0;
             padding-top: 5%;
             background-color: black;
             padding-bottom: 0%;
@@ -236,7 +254,7 @@
 
         .social li a{
             font-family: inherit;
-            font-size: 24px;
+            font-size: 20px;
             display: inline;
             float: right;
             padding: 10px;
@@ -314,7 +332,14 @@
 			<div class="logo"><a href="/home/anupam_shah/Desktop/TheFoodHogger/tfh.html"> The Food Hogger</a></div>
 			<ul>
 				
-                <li><a href="#">Restaurants</a></li>
+                <li><a href="/home/anupam_shah/Desktop/TheFoodHogger/tfh.html#restMain">Restaurants</a>
+                    <!--ul>
+                        <li><a href="/home/anupam_shah/Desktop/TheFoodHogger/Indian.html">Saffrontrails</a></li>
+                        <li><a href="/home/anupam_shah/Desktop/TheFoodHogger/Italian.html">Italiano</a></li>
+                        <li><a href="/home/anupam_shah/Desktop/TheFoodHogger/chinese.html">Chpsticks</a></li>
+                        <li><a href="/home/anupam_shah/Desktop/TheFoodHogger/dessert.html">Sweet Tooth</a></li>
+                    </ul>
+                </li>
 				
                 <!--li><a href="#">Menu</a></li-->
 				
@@ -341,7 +366,7 @@
     </div>
 
     <div class="grid-section">
-        <ul class="grid">
+        <ul class="grid"><a id="restMain">
             <li >
                 <div class="rest rest-1">
                     <a class="grid-info" href="/home/anupam_shah/Desktop/TheFoodHogger/Indian.html">
@@ -379,7 +404,7 @@
                 </div>
             </li>
 
-        </ul>
+       </a> </ul>
     </div>
 
     <!--div class="blogP">
