@@ -81,7 +81,7 @@
 body{
   margin: 0;
   padding: 0;
-  background: url(/home/anupam_shah/Desktop/TheFoodHogger/src/signIn.jpg);
+  background: url(/var/www/html/tfh/src/signIn.jpg);
   background-size: cover;
   font-family:'Alegreya Sans', sans-serif;
 }
@@ -208,36 +208,41 @@ h2{
 	
 	<div class="wrapper">
 		<nav>
-			<div class="logo"><a href="/home/anupam_shah/Desktop/TheFoodHogger/tfh.html"> The Food Hogger</a></div>
-			<ul>
-				<li><a href="/home/anupam_shah/Desktop/TheFoodHogger/tfh.html#restMain">Restaurants</a>
-				<!--li><a href="#">Menu</a></li-->
-				<li><a href="/home/anupam_shah/Desktop/TheFoodHogger/contactUs.html">Contact Us</a></li>
-				<li><a href="https://hungrypandadiaries.wordpress.com/">Blog</a></li>
-				
-			</ul>
-		</nav>
+      <div class="logo"><a href="/var/www/html/tfh/tfh.html"> The Food Hogger</a></div>
+      <ul>
+        
+                <li><a href="/var/www/html/tfh/tfh.html#restMain">Restaurants</a>
+        
+                <li><a href="/var/www/html/tfh/contactUs.html">Contact Us</a></li>
+        
+                <li><a href="https://hungrypandadiaries.wordpress.com/">Blog</a></li>
+        
+                <li><a class="active" href="/var/www/html/tfh/Sign In.html">LogIn</a></li>
+        
+                <li><a class="signup" href="//var/www/html/tfh/SignUp.html">SignUp</a></li>
+      </ul>
+    </nav>
 	</div>
 	<div class="signUpBox">
       <h2>Register Here</h2>
       <label>It's free and always will be.</label>
       <form>
         <p>Name</p>
-        <input id="name" type="text" name="" placeholder="Enter Name">
+        <input id="name" type="text" name="" placeholder="Enter Name" required>
         <p>Username</p>
-        <input id="username" type="text" name="" placeholder="Enter username">
+        <input id="username" type="text" name="" placeholder="Enter username" required>
         
         <p>Email</p>
-        <input id="email" type="text" name="" placeholder="abc123@example.com">
+        <input id="email" type="text" name="" placeholder="abc123@example.com" required>
   
         <p>Password</p>
-        <input id="password" type="Password" name="" placeholder="********">
+        <input id="password" type="Password" name="" placeholder="********" required>
         
         <p>Gender</p>
-        <input id="gender" type="text" name="" placeholder="Male/Female">
+        <input id="gender" type="text" name="" placeholder="Male/Female" required>
         
         <p>Address</p>
-        <input id="address" type="text" name="" placeholder="Address">
+        <input id="address" type="text" name="" placeholder="Address" required>
         
         <p><font size="0.8">By clicking Sign Up, you agree to our Terms and confirm that you have read our Data Policy, including our Cookie Use Policy.</font></p><br>
         
