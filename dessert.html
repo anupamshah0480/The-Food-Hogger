@@ -5,479 +5,13 @@
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
 	<link href="https://fonts.googleapis.com/css?family=Alegreya+Sans" rel="stylesheet">
   
-  <link href="//netdna.bootstrapcdn.com/bootstrap/3.0.0/css/bootstrap.min.css" rel="stylesheet" id="bootstrap-css">
-  
-  <script src="//netdna.bootstrapcdn.com/bootstrap/3.0.0/js/bootstrap.min.js"></script>
-  
-  <script src="//code.jquery.com/jquery-1.11.1.min.js"></script>
+  <script
+  src="https://code.jquery.com/jquery-2.1.4.min.js"
+  integrity="sha256-8WqyJLuWKRBVhxXIL1jBDD7SDxU936oZkCnxQbWwJVw="
+  crossorigin="anonymous"></script>
 
-  
+  <link rel="stylesheet" type="text/css" href="dessert.css">
 
-
-	<style type="text/css">
-		*{
-			margin:0;
-			padding: 0;
-			font-family: "Alegreya Sans", sans-serif; 
-		}
-
-    nav .logo a{
-            color: white;
-            text-decoration: none;
-        }
-
-		nav{
-	       position: relative;
-	       top: 0;
-	       left: 0;
-	       width: 100%;
-	       height: 100px;
-	       padding: 10px 100px;
-	       box-sizing: border-box;
-	       transition: .3s;
-           background-color: black;
-        }
-
-        
-
-        nav .logo{
-	       padding: 22px 20px;
-	       height: 80px;
-	       float: left;
-	       font-size: 40px;
-           font-weight: bold;
-	       transition: .3s;
-        }
-
-        nav .logo{
-            color: white;   
-        }
-
-        nav ul{
-            list-style: none;
-            float: right;margin: 0;
-            padding: 10px;
-            display: flex;
-        }
-
-        nav ul li{
-           list-style: none; 
-        }
-
-        nav ul li a{
-            line-height: 80px;
-            color: #151515;
-            padding: 12px 30px;
-            text-decoration: none;
-            text-transform: uppercase;
-            font-size: 20px;
-            font-weight: bold;
-            transition: .3s;
-
-        }
-
-        nav ul li a {
-            color: white;
-
-        }
-
-        nav ul li a:focus{
-            outline: none;
-        }
-
-        nav ul li a:hover{
-            background-color: #8BC34A;
-            border-radius: 6px;
-        }
-
-        #cover {
-  		height: 700px;
-  		position: relative;
-  		top: -15px;
-  		width: 100%;
-  		background:url("//var/www/html/tfh/src/dessertPgCover.jpg") no-repeat center bottom;
-  		background-size: cover;
-  		background-attachment: fixed;
-
-		}
-
-		img {
-  			display: block;
-  			width: 300px;
-  			height: 300px;
-		}
-
-h1,
-h2,
-h3 {
-  margin: 0;
-  padding: 1em 0;
-}
-
-p {
-  margin: 0;
-  padding: 1em 0;
-}
-
-.btn {
-  display: inline-block;
-  background: #333;
-  color: #fff;
-  text-decoration: none;
-  padding: 1em 2em;
-  border: 1px solid #666;
-  margin: 0.5em 0;
-}
-
-.btn:hover {
-  background: #eaeaea;
-  color: #333;
-}
-
-/* Header Showcase */
-
-#showcase {
-  min-height: 450px;
-  color: #fff;
-  text-align: center;
-}
-
-#showcase .bg-image {
-  position: absolute;
-  background: #333
-    url("https://static.pexels.com/photos/248515/pexels-photo-248515.png");
-  background-position: center;
-  background-repeat: no-repeat;
-  background-size: cover;
-  width: 100%;
-  height: 450px;
-  z-index: -1;
-  opacity: 0.4;
-}
-
-#showcase h1 {
-  padding-top: 100px;
-  padding-bottom: 0;
-}
-
-#showcase .content-wrap,
-#section-a .content-wrap {
-  padding: 0 1.5em;
-}
-
-/* Section A */
-
-#section-a {
-  background: #eaeaea;
-  color: #333;
-  padding-bottom: 2em;
-}
-
-/* Section B */
-
-#section-b {
-  padding: 2em 1em 1em;
-}
-
-#section-b ul {
-  list-style: none;
-  margin: 0;
-  padding: 0;
-}
-
-#section-b li {
-  margin-bottom: 1em;
-  background: #fff;
-  color: #333;
-}
-
-.card-content {
-  padding: 1.5em;
-}
-
-/* Section C */
-
-#section-c {
-  background: #fff;
-  color: #333;
-  padding: 2em;
-}
-
-/* Section D / Boxes */
-
-#section-d .box {
-  padding: 2em;
-  color: #fff;
-}
-
-#section-d .box:first-child {
-  background: #2690d4;
-}
-
-/* Footer */
-
-#main-footer {
-  padding: 2em;
-  background: #000;
-  color: #fff;
-  text-align: center;
-}
-
-#main-footer a {
-  color: #2690d4;
-  text-decoration: none;
-}
-
-/* Media Queries */
-
-@media (min-width: 700px) {
-  .grid {
-    display: grid;
-    grid-template-columns: 1fr repeat(2, minmax(auto, 25em)) 1fr;
-  }
-
-  #section-a .content-text {
-    columns: 2;
-    column-gap: 2em;
-  }
-
-  #section-a .content-text p {
-    padding-top: 0;
-  }
-
-  .content-wrap,
-  #section-b ul {
-    grid-column: 2/4;
-  }
-
-  .box,
-  #main-footer div {
-    grid-column: span 2;
-  }
-
-  #section-b ul {
-    display: flex;
-    justify-content: space-between;
-  }
-
-  #section-b li {
-    width: 51%;
-  }
-}
-
-
-ul.cf {
-	list-style: none;
-	font-size: 0px;
-}
-ul.cf li {
-	display: inline-block;
-	padding: 10px;
-	background: #fff;
-	border: 1px solid #ddd;
-	font-size: 16px;
-	font-size: 1rem;
-	vertical-align: top;
-	box-shadow: 0 0 5px #ddd;
-	box-sizing: border-box;
-	-moz-box-sizing: border-box;
-	-webkit-box-sizing: border-box;
-}
-ul.cf li img {
-			display: block;
-  			width: 300px;
-  			height: 300px;
-}
-ul.cf li h3 {
-	margin: 0 0 5px;
-}
-ul.cf li p {
-	font-size: 30px;
-	line-height: 1.5em;
-	color: #999;
-}
-ul.cf {
-	list-style: none;
-	margin-left: -2.5%;
-}
-ul.cf li {
-	display: inline-block;
-	padding: 10px;
-	margin: 0 0 2.5% 2.5%;
-	background: #fff;
-	border: 1px solid red;
-	font-size: 20px;
-	text-align: center;
-	vertical-align: top;
-	box-shadow: 0 0 5px #ddd;
-	box-sizing: border-box;
-	-moz-box-sizing: border-box;
-	-webkit-box-sizing: border-box;
-}
-
-ul.cf.columns-2 li {
-	width: 47.5%;
-}
-
-ul.cf.columns-3 li {
-	width: 47.5%;
-}
-
-ul.cf.columns-4 li {
-	width: 47.5%;
-}
-
-.content-title {
-	outline: none;
-	color: red;
-	text-align: center;
-}
-
-.card a{
-	color: red;
-	text-decoration: none;
-}
-
-.wrapper {
-  background-color: black;
-  height: 20px;
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
-  width: 550px;
-}
-
-/* Style the Un-order list by setting its list-style to none */
-.wrapper ul {
-  list-style: none;
-}
-
-/* Style the list items inside the UL list, by setting its width, height and line-height 
-  and float them to left and set its border and border-radius.
- */
-.wrapper ul li {
-  width: 75px;
-  height: 75px;
-  line-height: 75px;
-  margin: 0 10px;
-  text-align: center;
-  cursor: pointer;
-  border-radius: 50%;
-  border: 5px solid #D8E2DC;
-  float: left;
-  transition: all 0.5s ease;
-}
-
-/* Style the icons by setting its color and margin-top value to 20px 
-to align it properly */
-.wrapper ul li .fa {
-  color: #D8E2DC;
-  margin-top: 20px;
-  transition: all 0.5s ease;
-}
-
-/* Now target the specific li classes for styling and use box-shadow effect to border and text-shadow effect
-  to icons for glowing effect and use transition property for smooth transition effect. */
-/*facebook*/
-.wrapper ul li:hover.facebook {
-  border: 5px solid #3b5998;
-  box-shadow: 0 0 15px #3b5998;
-  transition: all 0.5s ease;
-}
-
-.wrapper ul li:hover .fa-facebook {
-  color: #3b5998;
-  text-shadow: 0 0 15px #3b5998;
-  transition: all 0.5s ease;
-}
-
-/*twitter*/
-.wrapper ul li:hover.twitter {
-  border: 5px solid #00aced;
-  box-shadow: 0 0 15px #00aced;
-  transition: all 0.5s ease;
-}
-
-.wrapper ul li:hover .fa-twitter {
-  color: #00aced;
-  text-shadow: 0 0 15px #00aced;
-  transition: all 0.5s ease;
-}
-
-/* instagram */
-.wrapper ul li:hover.instagram {
-  border: 5px solid #bc2a8d;
-  box-shadow: 0 0 15px #bc2a8d;
-  transition: all 0.5s ease;
-}
-
-.wrapper ul li:hover .fa-instagram {
-  color: #bc2a8d;
-  text-shadow: 0 0 15px #bc2a8d;
-  transition: all 0.5s ease;
-}
-
-/* google */
-.wrapper ul li:hover.google {
-  border: 5px solid #dd4b39;
-  box-shadow: 0 0 15px #dd4b39;
-  transition: all 0.5s ease;
-}
-
-.wrapper ul li:hover .fa-google {
-  color: #dd4b39;
-  text-shadow: 0 0 15px #dd4b39;
-  transition: all 0.5s ease;
-}
-
-/* whatsapp */
-.wrapper ul li:hover.whatsapp {
-  border: 5px solid #4dc247;
-  box-shadow: 0 0 15px #4dc247;
-  transition: all 0.5s ease;
-}
-
-.wrapper ul li:hover .fa-whatsapp {
-  color: #4dc247;
-  text-shadow: 0 0 15px #4dc247;
-  transition: all 0.5s ease;
-}
-
-
-/* media queries */
-
-@media screen and (max-width: 640px){
-  .wrapper {
-      width: 350px;
-  }
-  .wrapper ul li{
-      margin-top: 10px;
-  }
-  .wrapper ul li.google{
-      margin-left: 60px;
-  }
-}
-
-
-@media screen and (max-width: 340px){
-  .wrapper {
-      width: 150px;
-  }
-  .wrapper ul li{
-      margin:15px;
-  }
-  .wrapper ul li.google{
-      margin-left: 15px;
-  }
-}
-
-
-
-		
-		
-	
-	</style>
 </head>
 <body>
 
@@ -522,39 +56,56 @@ to align it properly */
         <div class="card">
           <img src="/var/www/html/tfh/src/des1.jpg" alt="">
           <div class="card-content">
-            <h3 class="card-title"><a href="#">Ice Cream Cupcakes</a></h3>
-            
+            <h3 class="card-title"><a href="#" class="add-to-cart" data-name="Ice Cream Cupcakes" data-price="60">Ice Cream Cupcakes</a></h3>
+            <label>Price: Rs. 60 <br/></label>
+            <!--label>Quantity: <input type="number" id="iccQuant" min='0' max="20"></label>
+            <button class="button" type="button">Buy!</button>
           </div>
         </div>
-      </li>
+      </li-->
       <li>
         <div class="card">
           <img src="/var/www/html/tfh/src/des2.jpg" alt="">
           <div class="card-content">
-            <h3 class="card-title"><a href="#"> Red Velvet Cake</a></h3>
-            
+            <h3 class="card-title"><a href="#" class="add-to-cart" data-name="Red Velvet Cake" data-price="80"> Red Velvet Cake</a></h3>
+            <label>Price: Rs. 80 <br/></label>
+            <!--label>Quantity: <input type="number" id="rvQuant" min='0' max="20"></label>
+            <button class="button" type="button">Buy!</button>
         </div>
-      </li>
+      </li-->
       <li>
         <div class="card">
           <img src="/var/www/html/tfh/src/des3.jpg" alt="">
           <div class="card-content">
-            <h3 class="card-title"><a href="#"> Gulab Jamun</a></h3>
-            
+            <h3 class="card-title"><a href="#" class="add-to-cart" data-name="Gulab Jamun" data-price="20"> Gulab Jamun</a></h3>
+            <label>Price: Rs. 20 <br/></label>
+            <!--label>Quantity: <input type="number" id="gjQuant" min='0' max="20"></label>
+            <button class="button" type="button">Buy!</button>
         </div>
-      </li>
+      </li-->
     </ul>
   </section>
+  <script type="text/javascript">
+   
+    $(".add-to-cart").click(function(event){
+            event.preventDefault();
+            var name =$(this).attr("data-name");
+            var price =Number($(this).attr("data-price"));
+            addItemToCart(name, price, 1)
+            displayCart();
+        });
+  </script>
+  <div>
+            <ul id="show-cart">
+                <!--  -->
+            </ul>
+            <div >Cart Total: Rs.<span id="total-cart"></span> </div>
+        </div>
 
-  <!--div class="wrapper">
-  <ul>
-    <li class="facebook"><i class="fa fa-facebook fa-2x" aria-hidden="true"></i></li>
-    <li class="twitter"><i class="fa fa-twitter fa-2x" aria-hidden="true"></i></li>
-    <li class="instagram"><i class="fa fa-instagram fa-2x" aria-hidden="true"></i></li>
-    <li class="google"><i class="fa fa-google fa-2x" aria-hidden="true"></i></li>
-    <li class="whatsapp"><i class="fa fa-whatsapp fa-2x" aria-hidden="true"></i></li>
-  </ul>
-</div-->
+
+  <script type="text/javascript" src="cart.js"></script>
+
+  
 
   
 </body>
