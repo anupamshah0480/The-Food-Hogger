@@ -11,7 +11,7 @@
             var cartArray = listCart();
             var output = '';
             for(var i in cartArray){
-                output += "<li>"+cartArray[i].name+"--"+cartArray[i].count+"</li>"
+                output += "<li>"+cartArray[i].name+" :"+cartArray[i].count+"</li>"
             }
             $("#show-cart").html(output);
             $("#total-cart").html(totalCart());
@@ -106,7 +106,9 @@
             cart = JSON.parse(localStorage.getItem("shoppingCart"));
         }
 
-        
+        function placed(){
+        	alert("Order placed! Will soon be delivered. Thankyou!")
+        }
 
         //loadCart();
         displayCart();
